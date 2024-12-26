@@ -27,7 +27,6 @@ CREATE TABLE person_staff(
     staff_type VARCHAR2(200) NOT NULL , -- store JSON format
     hire_date date NOT NULL,
     CONSTRAINT staff_id_fk FOREIGN KEY(staff_id) REFERENCES person(id),
-    CONSTRAINT staff_type_check CHECK (staff_type='technical' OR staff_type='researcher' OR staff_type='instructor' OR staff_type='manager' OR staff_type='other' ),
     CONSTRAINT unique_staff_person_id UNIQUE (staff_id)
 );
 
@@ -100,7 +99,7 @@ CREATE TABLE person_student_undergraduate(
     "level" VARCHAR2(10) NOT NULL,
     CONSTRAINT undergraduate_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student(student_id),
     CONSTRAINT unique_under_student_person_id UNIQUE(student_id),
-    CONSTRAINT level_under_student_check CHECK("level" = 'freshman' OR "level" = 'sophomore' OR "level" = 'jonior' OR "level" = 'senior' )
+    CONSTRAINT level_under_student_check CHECK("level" = 'freshman' OR "level" = 'sophomore' OR "level" = 'junior' OR "level" = 'senior' )
 );
 
 -- 12- create table department

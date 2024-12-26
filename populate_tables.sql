@@ -200,13 +200,13 @@ INSERT INTO person_student_postgraduate (student_id, graduation_year) VALUES (26
 INSERT INTO person_student_postgraduate (student_id, graduation_year) VALUES (30, 2023);
 
 -- person_student_undergraduate.sql
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (2, 'Junior');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (8, 'Sophomore');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (12, 'Senior');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (16, 'Freshman');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (20, 'Junior');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (24, 'Sophomore');
-INSERT INTO person_student_undergraduate (student_id, level) VALUES (28, 'Senior');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (2, 'junior');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (8, 'sophomore');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (12, 'senior');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (16, 'freshman');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (20, 'junior');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (24, 'sophomore');
+INSERT INTO person_student_undergraduate (student_id, "level") VALUES (28, 'senior');
 
 -- department.sql
 INSERT INTO department (department_id, department_name, building, floor_num, manager_id) 
@@ -226,7 +226,7 @@ INSERT INTO course (course_id, course_name, duration, credits) VALUES (501, 'Pri
 
 -- course_prerequisite.sql
 INSERT INTO course_prerequisite (course_id, prerequisite_id) VALUES (102, 101);
-INSERT INTO course_prerequisite (course_id, prerequisite_id) VALUES (401, NULL);
+INSERT INTO course_prerequisite (course_id, prerequisite_id) VALUES (401, 102);
 
 -- room.sql
 INSERT INTO room (room_id, capacity, room_type, building, floor_num) VALUES (1, 50, 'Lecture Hall', 'Main', 3);
@@ -323,3 +323,9 @@ INSERT INTO course_room (room_id, course_id, schedule_datetime)
 VALUES (20, 102, TO_DATE('2024-11-19 11:00:00', 'YYYY-MM-DD HH24:MI:SS')); 
 
 COMMIT;
+
+-- student must have completed courses
+
+
+
+select * from course
