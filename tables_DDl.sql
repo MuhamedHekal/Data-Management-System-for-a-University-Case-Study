@@ -16,6 +16,7 @@ CREATE TABLE person(
 CREATE TABLE person_phones(
     person_id NUMBER(10),
     phone VARCHAR2(15) NOT NULL,
+    phone_type VARCHAR2(15) NOT NULL,
     CONSTRAINT person_id_fk_phone FOREIGN KEY(person_id) REFERENCES person(id),
     CONSTRAINT person_phones_pk PRIMARY KEY(person_id,phone)
 );

@@ -61,37 +61,37 @@ INSERT INTO person (id, first_name, last_name, gender, address, date_of_birth, e
 VALUES (30, 'Chloe', 'Martinez', 'F', '2146 Maple Ave', TO_DATE('1995-09-15', 'YYYY-MM-DD'), 'chloe.martinez@example.com', 'student');
 
 -- person_phones.sql
-INSERT INTO person_phones (person_id, phone) VALUES (1, '555-1234');
-INSERT INTO person_phones (person_id, phone) VALUES (1, '555-5678');
-INSERT INTO person_phones (person_id, phone) VALUES (2, '555-9012');
-INSERT INTO person_phones (person_id, phone) VALUES (3, '555-3456');
-INSERT INTO person_phones (person_id, phone) VALUES (4, '555-7890');
-INSERT INTO person_phones (person_id, phone) VALUES (5, '555-4321');
-INSERT INTO person_phones (person_id, phone) VALUES (6, '555-9876');
-INSERT INTO person_phones (person_id, phone) VALUES (7, '555-5432');
-INSERT INTO person_phones (person_id, phone) VALUES (8, '555-1011');
-INSERT INTO person_phones (person_id, phone) VALUES (9, '555-1122');
-INSERT INTO person_phones (person_id, phone) VALUES (10, '555-2233');
-INSERT INTO person_phones (person_id, phone) VALUES (11, '555-3344');
-INSERT INTO person_phones (person_id, phone) VALUES (12, '555-4455');
-INSERT INTO person_phones (person_id, phone) VALUES (13, '555-5566');
-INSERT INTO person_phones (person_id, phone) VALUES (14, '555-6677');
-INSERT INTO person_phones (person_id, phone) VALUES (15, '555-7788');
-INSERT INTO person_phones (person_id, phone) VALUES (16, '555-8899');
-INSERT INTO person_phones (person_id, phone) VALUES (17, '555-9900');
-INSERT INTO person_phones (person_id, phone) VALUES (18, '555-0011');
-INSERT INTO person_phones (person_id, phone) VALUES (19, '555-1122');
-INSERT INTO person_phones (person_id, phone) VALUES (20, '555-2233');
-INSERT INTO person_phones (person_id, phone) VALUES (21, '555-3344');
-INSERT INTO person_phones (person_id, phone) VALUES (22, '555-4455');
-INSERT INTO person_phones (person_id, phone) VALUES (23, '555-5566');
-INSERT INTO person_phones (person_id, phone) VALUES (24, '555-6677');
-INSERT INTO person_phones (person_id, phone) VALUES (25, '555-7788');
-INSERT INTO person_phones (person_id, phone) VALUES (26, '555-8899');
-INSERT INTO person_phones (person_id, phone) VALUES (27, '555-9900');
-INSERT INTO person_phones (person_id, phone) VALUES (28, '555-0011');
-INSERT INTO person_phones (person_id, phone) VALUES (29, '555-1122');
-INSERT INTO person_phones (person_id, phone) VALUES (30, '555-2233');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (1, '555-1234', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (1, '555-5678', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (2, '555-9012', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (3, '555-3456', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (4, '555-7890', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (5, '555-4321', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (6, '555-9876', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (7, '555-5432', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (8, '555-1011', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (9, '555-1122', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (10, '555-2233', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (11, '555-3344', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (12, '555-4455', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (13, '555-5566', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (14, '555-6677', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (15, '555-7788', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (16, '555-8899', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (17, '555-9900', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (18, '555-0011', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (19, '555-1122', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (20, '555-2233', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (21, '555-3344', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (22, '555-4455', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (23, '555-5566', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (24, '555-6677', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (25, '555-7788', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (26, '555-8899', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (27, '555-9900', 'work');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (28, '555-0011', 'mobile');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (29, '555-1122', 'home');
+INSERT INTO person_phones (person_id, phone, phone_type) VALUES (30, '555-2233', 'mobile');
 
 -- person_staff.sql
 INSERT INTO person_staff (staff_id, salary, staff_type, hire_date) 
@@ -324,8 +324,3 @@ VALUES (20, 102, TO_DATE('2024-11-19 11:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 
 COMMIT;
 
--- student must have completed courses
-
-
-
-select * from course
