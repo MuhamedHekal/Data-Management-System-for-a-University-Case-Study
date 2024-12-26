@@ -53,3 +53,5 @@ ALTER USER CDS QUOTA UNLIMITED ON USERS;
 -- populate tables with data
 -- =======================================================
 
+@@populate_tables.sql
+

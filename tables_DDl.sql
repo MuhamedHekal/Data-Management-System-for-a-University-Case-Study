@@ -201,3 +201,4 @@ CREATE TABLE course_room(
     CONSTRAINT course_room_course_id_fk FOREIGN KEY(course_id) REFERENCES course(course_id),
     CONSTRAINT course_room_pk PRIMARY KEY(room_id,course_id,schedule_datetime)
 );
+
