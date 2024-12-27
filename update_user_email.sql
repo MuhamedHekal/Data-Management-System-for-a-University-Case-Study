@@ -19,7 +19,7 @@ begin
     EXCEPTION
         when OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
-
+            ROLLBACK;
 END;
 
 DECLARE 
