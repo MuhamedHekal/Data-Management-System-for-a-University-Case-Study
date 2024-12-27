@@ -20,9 +20,3 @@ begin
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
             
 END;
-
-DECLARE 
-
-BEGIN
-    person_update_email(1,'testawt@gmail.com');
-end;
