@@ -13,13 +13,12 @@ begin
     
     UPDATE PERSON set EMAIL = p_email 
     where ID = p_user_id ;
-    COMMIT ;
     DBMS_OUTPUT.PUT_LINE('Email update done');
     
     EXCEPTION
         when OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
-            ROLLBACK;
+            
 END;
 
 DECLARE 

@@ -19,7 +19,7 @@ begin
     if (v_phone_exist != 0) THEN
         UPDATE PERSON_PHONES set PHONE = p_new_phone 
         where PERSON_ID = p_user_id and PHONE_TYPE = p_phone_type;
-        COMMIT ;
+    
     ELSE
         RAISE_application_error(-20001, 'the user has not a ' || p_phone_type || ' phone');
     END if;
@@ -27,7 +27,7 @@ begin
     EXCEPTION
         when OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
-            ROLLBACK;
+        
 END;
 
 

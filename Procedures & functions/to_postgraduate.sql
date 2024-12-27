@@ -29,11 +29,9 @@ begin
     -- remove the student_data from under_graduate table
     DELETE from PERSON_STUDENT_UNDERGRADUATE 
     WHERE STUDENT_ID = p_student_id;
-    COMMIT;
    
     EXCEPTION
         when OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
-            ROLLBACK;
 
 END;

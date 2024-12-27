@@ -13,11 +13,9 @@ begin
     
     UPDATE PERSON set ADDRESS = p_address 
     where ID = p_user_id ;
-    COMMIT ;
     DBMS_OUTPUT.PUT_LINE('Address update done');
     
     EXCEPTION
         when OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('An error accured ' || SQLERRM);
-            ROLLBACK;
 END;
