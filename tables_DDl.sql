@@ -98,7 +98,7 @@ CREATE TABLE person_student_postgraduate(
 CREATE TABLE person_student_undergraduate(
     student_id NUMBER(10) NOT NULL,
     "level" VARCHAR2(10) NOT NULL,
-    CONSTRAINT undergraduate_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student(student_id) ON DELETE CASCADE, 
+    CONSTRAINT undergraduate_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student(student_id), 
     CONSTRAINT unique_under_student_person_id UNIQUE(student_id),
     CONSTRAINT level_under_student_check CHECK("level" = 'freshman' OR "level" = 'sophomore' OR "level" = 'junior' OR "level" = 'senior' )
 );
@@ -170,7 +170,7 @@ CREATE TABLE instructor_course(
 CREATE TABLE department_student(
     student_id NUMBER(10) NOT NULL,
     department_id NUMBER(10) NOT NULL,
-    CONSTRAINT department_student_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student_undergraduate(student_id) ON DELETE CASCADE,
+    CONSTRAINT department_student_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student(student_id),
     CONSTRAINT department_student_department_id_fk FOREIGN KEY(department_id) REFERENCES department(department_id),
     CONSTRAINT department_student_pk PRIMARY KEY(student_id)
 );
@@ -191,7 +191,7 @@ CREATE TABLE student_course(
     student_id NUMBER(10) NOT NULL,
     course_id NUMBER(10) NOT NULL,
     grade NUMBER(4),
-    CONSTRAINT student_course_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student_undergraduate(student_id) ON DELETE CASCADE,
+    CONSTRAINT student_course_student_id_fk FOREIGN KEY(student_id) REFERENCES person_student(student_id),
     CONSTRAINT student_course_course_id_fk FOREIGN KEY(course_id) REFERENCES course(course_id),
     CONSTRAINT student_course_pk PRIMARY KEY(student_id,course_id,grade)
 );
