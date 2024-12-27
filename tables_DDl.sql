@@ -206,3 +206,11 @@ CREATE TABLE course_room(
     CONSTRAINT course_room_pk PRIMARY KEY(room_id,course_id,schedule_datetime)
 );
 
+-- create grade point table for calculate the GPA for the student
+CREATE TABLE grade_point(
+    grade CHAR(2) NOT NULL,
+    "from" NUMBER(3) NOT NULL,
+    "to" NUMBER(3) NOT NULL,
+    grade_point NUMBER(2,1) NOT NULL ,
+    CONSTRAINT grade_pk PRIMARY KEY(grade)
+);

@@ -279,6 +279,20 @@ INSERT INTO department_course (department_id, course_id) VALUES (30, 301);
 INSERT INTO student_course (student_id, course_id, grade) VALUES (2, 101, 90);
 INSERT INTO student_course (student_id, course_id, grade) VALUES (8, 301, 85);
 INSERT INTO student_course (student_id, course_id, grade) VALUES (12, 301, 92);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (2, 102, 88);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (4, 201, 95);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (8, 301, 80);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (10, 401, 78);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (12, 501, 91);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (14, 401, 82);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (16, 501, 75);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (18, 201, 90);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (20, 501, 88);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (22, 401, 92);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (24, 201, 78);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (26, 501, 85);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (28, 301, 90);
+INSERT INTO student_course (student_id, course_id, grade) VALUES (30, 401, 75);
 
 -- course_room.sql
 INSERT INTO course_room (room_id, course_id, schedule_datetime) 
@@ -321,6 +335,22 @@ INSERT INTO course_room (room_id, course_id, schedule_datetime)
 VALUES (19, 101, TO_DATE('2024-11-19 08:00:00', 'YYYY-MM-DD HH24:MI:SS'));
 INSERT INTO course_room (room_id, course_id, schedule_datetime) 
 VALUES (20, 102, TO_DATE('2024-11-19 11:00:00', 'YYYY-MM-DD HH24:MI:SS')); 
+
+
+-- grade_point table 
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('A', 93, 100, 4.0);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('A-', 90, 92, 3.7);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('B+', 87, 89, 3.3);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('B', 83, 86, 3.0);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('B-', 80, 82, 2.7);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('C+', 77, 79, 2.3);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('C', 73, 76, 2.0);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('C-', 70, 72, 1.7);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('D+', 67, 69, 1.3);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('D', 65, 66, 1.0);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('D-', 60, 64, 0.7);
+INSERT INTO grade_point (grade, "from", "to", grade_point) VALUES ('E', 0, 59, 0.0);
+
 
 COMMIT;
 
