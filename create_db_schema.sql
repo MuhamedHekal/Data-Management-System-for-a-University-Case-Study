@@ -43,6 +43,8 @@ GRANT CREATE MATERIALIZED VIEW,
   TO CDS;
 
 ALTER USER CDS QUOTA UNLIMITED ON USERS;
+
+ALTER SESSION SET CURRENT_SCHEMA=CDS;
 -- =======================================================
 -- create the CDS schema objects
 -- =======================================================
