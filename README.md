@@ -1,7 +1,30 @@
 # Data-Management-System-for-a-University-Case-Study
 ## Overview
 
-This project aims to develop a robust and efficient data management system for a university setting. Leveraging a combination of SQL, PLSQL, Advanced PLSQL, Red Hat Linux, and Bash scripting, the system will be designed to handle diverse data requirements across various university functions.
+This project is a Data Management System designed for a university case study. It provides a structured database schema and management system to handle essential university operations, including student enrollment, course management, faculty assignments, and grading. The system ensures data integrity, scalability, and efficient query execution.
+
+## Features
+- **Student Management**: Enrollment, updates, and record maintenance.
+
+- **Course Management**: Handling course details, prerequisites, and schedules.
+
+- **Faculty Management**: Assigning instructors to courses.
+
+- **Grading System**: Managing student grades and academic records.
+
+- **Database Integrity**: Implementation of constraints, triggers, and indexes for efficiency.
+## Technologies Used
+
+- **Database**: Oracle Database
+
+- **SQL Techniques**: PL/SQL, Triggers, Sequences, Package
+
+- **Development Environment**: SQL Developer, Docker (for Oracle setup)
+
+- **BashScripting**: backup database , monitoring
+
+- **Version Control**: Git & GitHub
+
 ## 1- Database Design
 **Entity Relationship Diagram (ERD)**
 ![Collage ERD](photos/CollageERD.drawio.png)
@@ -34,3 +57,30 @@ This project aims to develop a robust and efficient data management system for a
 
 
 
+## Installation & Setup
+### 1. Clone the Repository:
+```
+git clone https://github.com/MuhamedHekal/Data-Management-System-for-a-University-Case-Study.git
+cd Data-Management-System-for-a-University-Case-Study
+```
+### 2. Setup Oracle Database (Using Docker):
+```
+# create your own folder to mount on it
+docker run --name oracle_db -p 1521:1521 -e ORACLE_PWD=123 -v ./database:/opt/oracle/ container-registry.oracle.com/database/free:latest
+
+```
+## 3. Connect to the Database:
+
+- Open SQL Developer or any SQL client. 
+     - Connect using:
+
+    - Host: `localhost`
+
+    - Port: `1521`
+
+    - User: `sys`
+
+    - Password: `123`
+
+    - SID/PDB: `FREE`
+- run create_db_schema.sql to create schema and populate tables 
