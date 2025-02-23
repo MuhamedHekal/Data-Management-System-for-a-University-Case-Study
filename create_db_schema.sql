@@ -44,7 +44,14 @@ GRANT CREATE MATERIALIZED VIEW,
 
 ALTER USER CDS QUOTA UNLIMITED ON USERS;
 
+CREATE OR REPLACE DIRECTORY DATA_PUMP_DIR AS '/opt/oracle/oradata/backup/differential';
+CREATE OR REPLACE DIRECTORY DATA_PUMP_FULL_DIR AS '/opt/oracle/oradata/backup/full';
+GRANT READ, WRITE ON DIRECTORY DATA_PUMP_DIR TO CDS;
+GRANT READ, WRITE ON DIRECTORY DATA_PUMP_FULL_DIR TO CDS;
+
 ALTER SESSION SET CURRENT_SCHEMA=CDS;
+
+
 -- =======================================================
 -- create the CDS schema objects
 -- =======================================================
@@ -56,4 +63,11 @@ ALTER SESSION SET CURRENT_SCHEMA=CDS;
 -- =======================================================
 
 @@populate_tables.sql
+
+-- =======================================================
+-- Create student pakage for manipulate his data
+-- =======================================================
+
+@@student_pkg.sql
+
 

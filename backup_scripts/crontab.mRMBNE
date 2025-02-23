@@ -1,0 +1,8 @@
+# Transactional backup: Every day at 12 AM
+0 0 * * * /opt/oracle/oradata/BackupSripts/transactional_backup.sh
+
+# Differential backup: Every Sunday at 2 AM
+0 2 * * 0 /opt/oracle/oradata/BackupSripts/differential_backup.sh
+
+# Full backup: Last day of every month at 3 AM
+0 3 28-31 * * [ "$(date +\%d -d tomorrow)" == "01" ] && /opt/oracle/oradata/BackupSripts/full_backup.sh
